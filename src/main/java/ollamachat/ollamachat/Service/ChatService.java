@@ -14,6 +14,7 @@ public class ChatService {
     }
 
     public String generateResponse(String message) {
-        return chatModel.call(message);
+        String prompt = "Respond concisely in a maximum of two sentences: " + message;
+        return chatModel.call(prompt);
     }
 }
