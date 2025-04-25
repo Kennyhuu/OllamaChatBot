@@ -1,7 +1,7 @@
 package ollamachat.ollamachat.Interface;
 
 import discord4j.core.object.entity.Message; // Importing the Message class from Discord4J
-import ollamachat.ollamachat.Service.ChatService; // Importing ChatService for bot responses
+import ollamachat.ollamachat.Service.Chat.ChatService; // Importing ChatService for bot responses
 import reactor.core.publisher.Mono; // Importing Mono for reactive programming
 
 // Abstract class to handle message-based events in a Discord bot

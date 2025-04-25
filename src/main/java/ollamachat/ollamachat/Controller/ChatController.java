@@ -1,6 +1,6 @@
 package ollamachat.ollamachat.Controller;
 
-import ollamachat.ollamachat.Service.ChatService;
+import ollamachat.ollamachat.Service.Chat.ChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;

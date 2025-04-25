@@ -1,13 +1,14 @@
-Source
-https://medium.com/@pen.darkknight/building-a-conversational-ai-chatbot-with-ollama-spring-boot-and-angular-163011232461
-html template
-https://javatechonline.com/spring-boot-chat-application-with-deepseek-and-ollama/
+# 🧠 Discord AI Chatbot with Spring Boot + Ollama
 
-discord
-https://www.baeldung.com/spring-discord4j-bot
+A Java Spring Boot application that connects to [Ollama](https://ollama.com) as an AI backend and integrates with a **Discord bot** as the user interface. Chat directly with powerful LLMs like LLaMA, Mistral, or other local models via Discord!
 
+---
 
-# OllamaChatBot
+## 🚀 Features
 
-Terminal Run 
-ollama run llama3.1
+- 🤖 Discord bot as a chat interface
+- 🔁 Real-time AI responses via Ollama (running locally or remote)
+- 🛠️ Modular Spring Boot backend for scalability
+- 🔐 Secure API communication
+
+---

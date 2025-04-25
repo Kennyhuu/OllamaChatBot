@@ -3,7 +3,7 @@ package ollamachat.ollamachat.Service.Discord;
 import discord4j.core.event.domain.message.MessageCreateEvent; // Importing the event when a message is created in Discord
 import ollamachat.ollamachat.Interface.EventListener;  // Importing the EventListener interface that we are implementing
 import ollamachat.ollamachat.Interface.MessageListener; // Importing MessageListener interface, which is extended by this class
-import ollamachat.ollamachat.Service.ChatService; // Importing the ChatService that will be used to process the message
+import ollamachat.ollamachat.Service.Chat.ChatService;
 import org.springframework.beans.factory.annotation.Autowired; // Used for dependency injection of Spring beans
 import org.springframework.stereotype.Service; // Denotes that this class is a service (business logic)
 import reactor.core.publisher.Mono; // Importing Mono from Reactor to handle asynchronous operations

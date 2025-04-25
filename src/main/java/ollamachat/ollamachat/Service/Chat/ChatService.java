@@ -1,4 +1,4 @@
-package ollamachat.ollamachat.Service;
+package ollamachat.ollamachat.Service.Chat;
 
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.beans.factory.annotation.Autowired;
