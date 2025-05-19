@@ -3,20 +3,20 @@ package ollamachat.ollamachat.Service.Discord;
 import discord4j.core.event.domain.message.MessageUpdateEvent; // Importing the event class for message updates
 import ollamachat.ollamachat.Interface.EventListener; // Importing the custom EventListener interface
 import ollamachat.ollamachat.Interface.MessageListener; // Importing the custom MessageListener interface
-import ollamachat.ollamachat.Service.Chat.ChatService;
+import ollamachat.ollamachat.Service.Chat.OllamaSpringChatService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono; // Mono for reactive programming (non-blocking)
 
 @Service // Marks this class as a Spring service bean to be managed by the Spring container
-public class MessageUpdateListener extends MessageListener implements EventListener<MessageUpdateEvent> {
+public class DiscordMessageUpdateListener extends MessageListener implements EventListener<MessageUpdateEvent> {
 
-    private final ChatService chatService; // The ChatService is injected and used for message processing
+    private final OllamaSpringChatService ollamaSpringChatService; // The ChatService is injected and used for message processing
 
     // Constructor to inject ChatService into the MessageUpdateListener
     @Autowired
-    public MessageUpdateListener(ChatService chatService) {
-        this.chatService = chatService; // Initialize the chatService
+    public DiscordMessageUpdateListener(OllamaSpringChatService ollamaSpringChatService) {
+        this.ollamaSpringChatService = ollamaSpringChatService; // Initialize the chatService
     }
 
     /**
@@ -43,7 +43,7 @@ public class MessageUpdateListener extends MessageListener implements EventListe
         return Mono.just(event) // Wrap the event into a Mono
                 .filter(MessageUpdateEvent::isContentChanged) // Filter only if the message content has changed
                 .flatMap(MessageUpdateEvent::getMessage) // Extract the updated message from the event
-                .flatMap(message -> processCommand(message, this.chatService)); // Process the command for the updated message
+                .flatMap(message -> processCommand(message, this.ollamaSpringChatService)); // Process the command for the updated message
     }
 
     /**
@@ -51,10 +51,10 @@ public class MessageUpdateListener extends MessageListener implements EventListe
      * This method is assumed to be implemented in a parent class (MessageListener) or elsewhere.
      *
      * @param message The message that needs processing
-     * @param chatService The chat service used to process the command
+     * @param ollamaSpringChatService The chat service used to process the command
      * @return A Mono<Void> representing the asynchronous processing of the message
      */
-    private Mono<Void> processCommand(Object message, ChatService chatService) {
+    private Mono<Void> processCommand(Object message, OllamaSpringChatService ollamaSpringChatService) {
         // Here you'd implement logic to process the command in the message, like handling commands
         return Mono.empty(); // Placeholder, as the actual logic is dependent on your implementation
     }

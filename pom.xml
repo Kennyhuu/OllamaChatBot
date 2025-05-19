@@ -80,6 +80,38 @@
 			<artifactId>discord4j-core</artifactId>
 			<version>3.3.0-RC1</version>
 		</dependency>
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j</artifactId>
+			<version>0.34.0</version>
+		</dependency>
+
+		<!-- LANGCHAIN4J OLLAMA AI MODEL DEPENDENCY -->
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-ollama</artifactId>
+			<version>0.34.0</version>
+		</dependency>
+
+		<!-- LANGCHAIN4J OPEN AI MODEL DEPENDENCY -->
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-open-ai</artifactId>
+			<version>0.34.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/dev.langchain4j/langchain4j-document-parser-apache-tika -->
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-document-parser-apache-tika</artifactId>
+			<version>0.34.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-easy-rag</artifactId>
+			<version>0.34.0</version>
+		</dependency>
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>

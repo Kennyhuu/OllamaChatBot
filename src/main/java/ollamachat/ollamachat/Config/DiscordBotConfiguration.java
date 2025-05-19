@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration; // Indicates that t
 import java.util.List; // For working with lists of event listeners
 
 @Configuration // Marks this class as a configuration class for Spring context
-public class BotConfiguration {
+public class DiscordBotConfiguration {
 
     // Injects the token value from the application.properties or application.yml file into this field
     @Value("${token}")

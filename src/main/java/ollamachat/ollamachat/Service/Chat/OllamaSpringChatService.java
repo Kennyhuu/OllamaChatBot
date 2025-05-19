@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ChatService {
+public class OllamaSpringChatService {
     private final OllamaChatModel chatModel;
 
     @Autowired
-    public ChatService(OllamaChatModel chatModel) {
+    public OllamaSpringChatService(OllamaChatModel chatModel) {
         this.chatModel = chatModel;
     }
 
